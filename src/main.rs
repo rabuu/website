@@ -77,28 +77,7 @@ fn App() -> impl IntoView {
         </div>
         <hr/>
         <PongDisplay pong={pong}/>
-        <div class="buttons">
-            <button
-                on:mousedown=move |_| {
-                    set_up.set(true);
-                    set_down.set(false);
-                }
-                on:mouseup=move |_| {
-                    set_up.set(false);
-                }>
-                "UP"
-            </button>
-            <button
-                on:mousedown=move |_| {
-                    set_down.set(true);
-                    set_up.set(false);
-                }
-                on:mouseup=move |_| {
-                    set_down.set(false);
-                }>
-                "DOWN"
-            </button>
-        </div>
+        <Buttons set_up={set_up} set_down={set_down}/>
     }
 }
 
@@ -163,4 +142,58 @@ fn PongDisplay(pong: ReadSignal<Pong>) -> impl IntoView {
     });
 
     view! { <div id="pong">{canvas}</div> }
+}
+
+#[component]
+fn Buttons(set_up: WriteSignal<bool>, set_down: WriteSignal<bool>) -> impl IntoView {
+    view! {
+        <div class="buttons">
+            <button
+                on:mousedown=move |_| {
+                    set_up.set(true);
+                    set_down.set(false);
+                }
+                on:mouseup=move |_| {
+                    set_up.set(false);
+                }
+                on:mouseleave=move |_| {
+                    set_up.set(false);
+                }
+                on:touchstart=move |_| {
+                    set_up.set(true);
+                    set_down.set(false);
+                }
+                on:touchend=move |_| {
+                    set_up.set(false);
+                }
+                on:touchcancel=move |_| {
+                    set_up.set(false);
+                }>
+                "UP"
+            </button>
+            <button
+                on:mousedown=move |_| {
+                    set_down.set(true);
+                    set_up.set(false);
+                }
+                on:mouseup=move |_| {
+                    set_down.set(false);
+                }
+                on:mouseleave=move |_| {
+                    set_down.set(false);
+                }
+                on:touchstart=move |_| {
+                    set_down.set(true);
+                    set_up.set(false);
+                }
+                on:touchend=move |_| {
+                    set_down.set(false);
+                }
+                on:touchcancel=move |_| {
+                    set_down.set(false);
+                }>
+                "DOWN"
+            </button>
+        </div>
+    }
 }
