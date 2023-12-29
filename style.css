@@ -23,13 +23,13 @@ h1 {
 	font-size: 600%;
 }
 
-#links {
+.links {
 	display: flex;
 	justify-content: space-evenly;
 	margin: 3em;
 }
 
-#links a {
+.links a {
 	color: white;
 	text-decoration: none;
 	font-family: pong;
@@ -38,7 +38,7 @@ h1 {
 	border: solid white;
 }
 
-#links a:hover {
+.links a:hover {
 	border: solid white;
 	background: white;
 	color: black;
