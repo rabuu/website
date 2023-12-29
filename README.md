@@ -1,6 +1,6 @@
 # My Website
 
-See at [https://rbuurman.de].
+See at <https://rbuurman.de>.
 
 # Font
-The used font I stole from [https://www.mattlag.com/bitfonts/][here].
+The used font I stole from [here](https://www.mattlag.com/bitfonts/).
