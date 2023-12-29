@@ -13,6 +13,9 @@ pub struct Pong {
     pub paddle_left: Vec2,
     pub paddle_right: Vec2,
 
+    pub paddle_speed: f64,
+    pub paddle_right_speed_factor: f64,
+
     pub ball_size: f64,
 
     pub ball: Vec2,
@@ -24,17 +27,20 @@ impl Pong {
         let height = width / 2.0;
         let line_width = width / 100.0;
 
-        let paddle_width = 2.0 * line_width;
-        let paddle_height = width / 5.0;
+        let paddle_width = 1.3 * line_width;
+        let paddle_height = width / 7.0;
 
         let paddle_left = Vec2 {
-            x: 3.0 * line_width,
+            x: 2.0 * line_width,
             y: (height - paddle_height) / 2.0,
         };
         let paddle_right = Vec2 {
-            x: width - paddle_width - 3.0 * line_width,
+            x: width - paddle_width - 2.0 * line_width,
             y: (height - paddle_height) / 2.0,
         };
+
+        let paddle_speed = ball_vel_y.abs() * 0.9;
+        let paddle_right_speed_factor = 0.9;
 
         let ball_size = 2.0 * line_width;
 
@@ -56,6 +62,8 @@ impl Pong {
             paddle_height,
             paddle_left,
             paddle_right,
+            paddle_speed,
+            paddle_right_speed_factor,
             ball_size,
             ball,
             ball_vel,
@@ -63,24 +71,68 @@ impl Pong {
     }
 
     pub fn tick(&mut self) {
-        self.scroll(0.0);
         self.ball += self.ball_vel;
 
+        // master of AI
+        let paddle_center = self.paddle_right.y + (self.paddle_height / 2.0);
+        if self.ball.y < paddle_center {
+            self.scroll_right(true);
+        } else if self.ball.y > paddle_center {
+            self.scroll_right(false);
+        }
+
+        // walls left & right
         if self.ball.x >= self.width - self.line_width - self.ball_size {
             self.ball_vel.x = -self.ball_vel.x;
         } else if self.ball.x <= self.line_width {
             self.ball_vel.x = -self.ball_vel.x;
         }
 
+        // walls top & bottom
         if self.ball.y >= self.height - self.line_width - self.ball_size {
             self.ball_vel.y = -self.ball_vel.y;
         } else if self.ball.y <= self.line_width {
             self.ball_vel.y = -self.ball_vel.y;
         }
+
+        // left paddle
+        if self.ball.x <= self.paddle_left.x + self.paddle_width
+            && self.ball.x >= self.paddle_left.x
+            && self.ball.y + self.ball_size > self.paddle_left.y
+            && self.ball.y <= self.paddle_left.y + self.paddle_height
+        {
+            self.ball_vel.x = -self.ball_vel.x;
+        }
+
+        // right paddle
+        if self.ball.x + self.ball_size >= self.paddle_right.x
+            && self.ball.x <= self.paddle_right.x + self.paddle_width
+            && self.ball.y + self.ball_size > self.paddle_right.y
+            && self.ball.y <= self.paddle_right.y + self.paddle_height
+        {
+            self.ball_vel.x = -self.ball_vel.x;
+        }
     }
 
-    pub fn scroll(&mut self, val: f64) {
+    pub fn scroll_left(&mut self, up: bool) {
+        let val = if up {
+            -self.paddle_speed
+        } else {
+            self.paddle_speed
+        };
         self.paddle_left.y = (self.paddle_left.y + val).clamp(
+            self.line_width,
+            self.height - self.line_width - self.paddle_height,
+        );
+    }
+
+    pub fn scroll_right(&mut self, up: bool) {
+        let val = if up {
+            -self.paddle_speed * self.paddle_right_speed_factor
+        } else {
+            self.paddle_speed * self.paddle_right_speed_factor
+        };
+        self.paddle_right.y = (self.paddle_right.y + val).clamp(
             self.line_width,
             self.height - self.line_width - self.paddle_height,
         );
