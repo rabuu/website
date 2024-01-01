@@ -22,7 +22,7 @@ fn main() {
 #[component]
 fn App() -> impl IntoView {
     let width = window().inner_width().unwrap().as_f64().unwrap() * 0.9;
-    let (pong, set_pong) = create_signal(Pong::new(width, 8.0, -3.0));
+    let (pong, set_pong) = create_signal(Pong::new(width, width / 70., width / 250.));
 
     let (up, set_up) = create_signal(false);
     let (down, set_down) = create_signal(false);
@@ -35,10 +35,10 @@ fn App() -> impl IntoView {
         move || {
             if up.get() {
                 set_pong.update(|p| p.scroll_left(true))
-            };
+            }
             if down.get() {
                 set_pong.update(|p| p.scroll_left(false))
-            };
+            }
 
             set_pong.update(Pong::tick);
         },
