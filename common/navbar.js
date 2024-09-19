@@ -4,13 +4,13 @@ width_query.addEventListener("change", function() {
     document.getElementById("links").style.display = width_query.matches ? "none" : "block";
 })
 
-function toggle_links() {
+function nav_toggle_links() {
     var links = document.getElementById("links");
     if (width_query.matches) {
-        if (links.style.display == "none") {
-            links.style.display = "block";
-        } else {
+        if (links.style.display == "block") {
             links.style.display = "none";
+        } else {
+            links.style.display = "block";
         }
     }
 }

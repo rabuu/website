@@ -2,11 +2,11 @@
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    width: 100%;
     border: 1px solid var(--fg);
     border-radius: 5px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: var(--step1);
 }
 
@@ -15,15 +15,28 @@
     margin: 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 #navbar #nav-icon {
+    display: block;
+    margin: 0;
     padding: 0 1em;
     width: 2.0em;
 }
 
+#navbar #nav-hamburger {
+    display: none;
+    width: 2em;
+    margin-left: auto;
+    padding: 0 1em;
+}
+
 #navbar ul#links {
-    list-style-type: none;
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
     overflow: hidden;
 }
 
@@ -47,11 +60,13 @@
 @media only screen and (min-width: 601px) {
     #navbar {
         flex-direction: row;
+        justify-content: space-between;
     }
 
     #navbar ul#links {
         display: block;
-        margin-left: auto;
+        /* margin-left: auto; */
+        /* width: ; */
     }
 
     #navbar li {
@@ -76,6 +91,14 @@
         position: relative;
         width: 50%;
         flex-direction: column;
+    }
+
+    #navbar #nav-head {
+        width: 100%;
+    }
+
+    #navbar #nav-hamburger {
+        display: inline-block;
     }
 
     #navbar ul#links {

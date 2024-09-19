@@ -6,10 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <script type="text/javascript" src="https://rbuurman.de/navbar.js"></script>
+        <!-- <script type="text/javascript" src="../common/navbar.js"></script> -->
 
         <link rel="icon" href="https://rbuurman.de/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="https://rbuurman.de/common.css" type="text/css" />
         <link rel="stylesheet" href="https://rbuurman.de/navbar.css" type="text/css" />
+        <!-- <link rel="stylesheet" href="../common/common.css" type="text/css" />
+             <link rel="stylesheet" href="../common/navbar.css" type="text/css" /> -->
         <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
     </head>
 
@@ -24,8 +27,10 @@
 
         <nav id="navbar">
             <div id="nav-head">
-                <img id="nav-icon" src="https://rbuurman.de/logo.png" alt="logo" onclick="toggle_links()" />
+                <!-- <img id="nav-icon" src="https://rbuurman.de/logo.png" alt="logo" /> -->
+                <a href="https://rbuurman.de"><img id="nav-icon" src="https://rbuurman.de/logo.png" alt="logo" /></a>
                 <p id="nav-label">Homepage</p>
+                <img id="nav-hamburger" src="https://rbuurman.de/hamburger.svg" onclick="nav_toggle_links()" />
             </div>
             <ul id="links">
                 <li class="active" ><a href="https://rbuurman.de">home</a></li>
