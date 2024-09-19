@@ -1,0 +1,17 @@
+#box {
+    margin: auto;
+    padding-top: 2em;
+    text-align: center;
+}
+
+#box h1 {
+    font-size: 110%;
+}
+
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}

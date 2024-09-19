@@ -1,0 +1,73 @@
+:root {
+    --bg: #ebebeb;
+    --fg: #000000;
+    --step1: #d1d1d1;
+    --step2: #b6b6b6;
+    --step3: #9b9b9b;
+    --accent-bg: #a3b7ca;
+    --accent-fg: #476f95;
+}
+
+html {
+    margin: 0;
+
+    background: var(--bg);
+    color: var(--fg);
+}
+
+a {
+    color: var(--accent-fg);
+    text-decoration: underline;
+}
+
+#navbar ul {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    border-radius: 5px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--step1);
+}
+
+#navbar li {
+    float: right;
+    border-left: 1px solid var(--fg);
+}
+
+#navbar li:first-child {
+    border-left: none;
+}
+
+#navbar li a {
+    padding: 0.7em 1em;
+    display: block;
+    text-align: center;
+    color: var(--fg);
+    text-decoration: underline;
+}
+
+#navbar li a.active {
+    background-color: var(--step2);
+}
+
+#navbar li a:hover {
+    background-color: var(--accent-bg);
+}
+
+#navbar .nav-left {
+    float: left;
+}
+
+#navbar #nav-label {
+    padding: 0.7em 1em;
+}
+
+#navbar #nav-icon {
+    padding: 0.4em;
+    padding-bottom: 0;
+    width: 2.0em;
+}
