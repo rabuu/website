@@ -4,29 +4,36 @@
         <meta charset="utf-8">
         <title>home | rbuurman.de</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="http://rbuurman.de/favicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" href="http://rbuurman.de/mainstyle.css" type="text/css" />
+
+        <script type="text/javascript" src="https://rbuurman.de/navbar.js"></script>
+
+        <link rel="icon" href="https://rbuurman.de/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="https://rbuurman.de/common.css" type="text/css" />
+        <link rel="stylesheet" href="https://rbuurman.de/navbar.css" type="text/css" />
         <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
     </head>
+
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">
             You are using an <strong>outdated</strong> browser. Please
-            <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+            <a href="https://browsehappy.com/">upgrade your browser</a> to improve
             your experience.
             </p>
         <![endif]-->
 
-        <div id="navbar">
-            <ul>
-                <li class="nav-left"><img id="nav-icon" src="http://rbuurman.de/logo.png" alt="logo" /></li>
-                <li class="nav-left" id="nav-label">Homepage</li>
-                <li><a href="http://misc.rbuurman.de">misc</a></li>
-                <li><a href="http://cloud.rbuurman.de">cloud</a></li>
-                <li><a href="http://dev.rbuurman.de">dev</a></li>
-                <li><a class="active" href="http://rbuurman.de">home</a></li>
+        <nav id="navbar">
+            <div id="nav-head">
+                <img id="nav-icon" src="https://rbuurman.de/logo.png" alt="logo" onclick="toggle_links()" />
+                <p id="nav-label">Homepage</p>
+            </div>
+            <ul id="links">
+                <li class="active" ><a href="https://rbuurman.de">home</a></li>
+                <li><a href="https://dev.rbuurman.de">dev</a></li>
+                <li><a href="https://cloud.rbuurman.de">cloud</a></li>
+                <li><a href="https://misc.rbuurman.de">misc</a></li>
             </ul>
-        </div>
+        </nav>
 
         <div id="box">
             <h1>Das ist die Website von Rasmus Buurman.</h1>
@@ -38,11 +45,11 @@
         <div id="footer">
             <p>
                 Der Source Code dieser Website ist auf
-                <a href="http://github.com/rabuu/website">GitHub</a>.
+                <a href="https://github.com/rabuu/website">GitHub</a>.
             </p>
             <p>
                 Meine alte Website ist derzeit noch
-                <a href="http://old.rbuurman.de">hier</a>
+                <a href="https://old.rbuurman.de">hier</a>
                 zu finden.
             </p>
         </div>
