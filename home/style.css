@@ -8,6 +8,12 @@
     font-size: 110%;
 }
 
+#box img {
+    display: block;
+    margin: auto;
+    width: 70%;
+}
+
 #footer {
     padding: 5em;
     text-align: center;
