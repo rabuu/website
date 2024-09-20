@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--step1);
+    background-color: var(--bg-step1);
 }
 
 #navbar #nav-head {
@@ -52,7 +52,7 @@
 }
 
 #navbar li.active {
-    background-color: var(--step2);
+    background-color: var(--bg-step2);
 }
 
 #navbar li a:hover {

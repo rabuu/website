@@ -1,9 +1,10 @@
 :root {
     --bg: #ebebeb;
+    --bg-highlight: #dfdfdf;
+    --bg-step1: #d1d1d1;
+    --bg-step2: #b6b6b6;
+    --bg-step3: #9b9b9b;
     --fg: #000000;
-    --step1: #d1d1d1;
-    --step2: #b6b6b6;
-    --step3: #9b9b9b;
     --accent-bg: #a3b7ca;
     --accent-fg: #476f95;
     --border-radius: 5px;
