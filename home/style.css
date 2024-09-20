@@ -11,10 +11,10 @@
 #box img {
     display: block;
     margin: auto;
-    width: 70%;
+    width: 20em;
 }
 
 #footer {
-    padding: 5em;
+    padding-top: 5em;
     text-align: center;
 }
