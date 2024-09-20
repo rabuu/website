@@ -12,6 +12,7 @@
     display: block;
     margin: auto;
     width: 20em;
+    border: 3px solid var(--fg);
 }
 
 #footer {
