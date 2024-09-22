@@ -8,7 +8,7 @@
         <meta name="author" content="Rasmus Buurman">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <script type="text/javascript" src="common/navbar.js"></script>
+        <script type="text/javascript" src="/common/navbar.js"></script>
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="/common/common.css" type="text/css" media="screen" />
@@ -25,20 +25,7 @@
             </p>
         <![endif]-->
 
-        <nav id="navbar">
-            <div id="nav-head">
-                <a href="/"><img id="nav-icon" src="/assets/logo.png" alt="Logo" /></a>
-                <p id="nav-label">Miscellaneous</p>
-                <img id="nav-hamburger" src="/assets/hamburger.svg" onclick="nav_toggle_links()" />
-            </div>
-            <ul id="links">
-                <li><a href="/">home</a></li>
-                <li><a href="/dev">dev</a></li>
-                <li><a href="https://cloud.rbuurman.de">cloud</a></li>
-                <li class="active" ><a href="/misc">misc</a></li>
-            </ul>
-        </nav>
-
+        <nav-bar label="Miscellaneous" active="misc"></nav-bar>
         <p>In Arbeit...</p>
 
     </body>
