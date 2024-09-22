@@ -34,12 +34,14 @@ class NavBar extends HTMLElement {
         let head = document.createElement("div");
         head.id = "nav-head";
 
-        let homepageLink = document.createElement("a");
-        homepageLink.href = "/";
+        let homelink = document.createElement("a");
+        homelink.href = "/";
 
-        let homepageIcon = document.createElement("img");
-        homepageIcon.id = "nav-icon";
-        homepageIcon.src = "/assets/logo.png";
+        let logo = document.createElement("img");
+        logo.id = "nav-icon";
+        logo.src = "/assets/logo.png";
+
+        homelink.append(logo);
 
         let label = document.createElement("p");
         label.id = "nav-label";
@@ -51,6 +53,10 @@ class NavBar extends HTMLElement {
         hamburger.id = "nav-hamburger";
         hamburger.src = "/assets/hamburger.svg";
         hamburger.onclick = () => {nav_toggle_links()};
+
+        head.append(homelink);
+        head.append(label);
+        head.append(hamburger);
 
         let links = document.createElement("ul");
         links.id = "nav-links";
@@ -70,18 +76,14 @@ class NavBar extends HTMLElement {
             link.href = href;
             link.textContent = name;
 
-            entry.appendChild(link);
-            links.appendChild(entry);
+            entry.append(link);
+            links.append(entry);
         }
 
-        homepageLink.appendChild(homepageIcon);
-        head.appendChild(homepageLink);
-        head.append(label);
-        head.append(hamburger);
+        wrapper.append(head);
+        wrapper.append(links);
 
-        wrapper.appendChild(head);
-        wrapper.appendChild(links);
-        this.appendChild(wrapper);
+        this.append(wrapper);
     }
 }
 

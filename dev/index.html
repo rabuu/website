@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <script type="text/javascript" src="/common/navbar.js"></script>
+        <script type="text/javascript" src="main.js"></script>
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="/common/common.css" type="text/css" media="screen" />
@@ -33,19 +34,13 @@
             Hier ist eine Auswahl:
         </p>
 
-        <div class="project">
-            <h1><a href="https://github.com/rabuu/website">Meine Webseite</a></h1>
-            <p class="project-description">
-                Meine persönliche Webseite, geschrieben in statischem HTML/CSS/JS.
-            </p>
+        <project-block name="website" descr="Meine persönliche Webseite.">
             <p>Sie läuft hier auf <a href="/">rbuurman.de</a>.</p>
-        </div>
+        </project-block>
 
-        <div class="project">
-            <h1><a href="https://github.com/rabuu/raytrascii">raytrascii</a></h1>
-            <p class="project-description">
-                Ein einfacher Ray Tracer, der als ASCII Zeichen ins Terminal rendert.
-            </p>
+        <project-block name="raytrascii"
+            descr="Ein Ray Tracer, der als ASCII Zeichen rendert."
+        >
             <p>
                 Dieses Projekt basiert auf dem Buch
                 <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html">
@@ -54,46 +49,37 @@
                 von <a href="https://github.com/petershirley">Peter Shirley</a>
                 und ist in Rust geschrieben.
             </p>
-        </div>
+        </project-block>
 
-        <div class="project">
-            <h1><a href="https://github.com/rabuu/huffman-viz">huffman-viz</a></h1>
-            <p class="project-description">
-                Eine Webapp, die den Huffman Coding Algorithmus Schritt für Schritt visualisiert.
-                Sie ist in Rust geschrieben und kompiliert zu WASM.
-            </p>
-            <p>Die Webapp läuft <a href="huffman/">hier</a>.</p>
-        </div>
+        <project-block name="huffman-viz"
+            descr="Eine Webapp, die den Huffman Algorithmus visualisiert."
+        >
+            <p>Die Webapp ist in Rust geschrieben und kompiliert zu WASM.</p>
+            <p>Sie läuft <a href="huffman/">hier</a>.</p>
+        </project-block>
 
-        <div class="project">
-            <h1><a href="https://github.com/rabuu/aesculap">aesculap</a></h1>
-            <p class="project-description">
-                Ein CLI-Tool und eine Rust Library zum Ver-/Entschlüsseln mittels AES.
-            </p>
+        <project-block name="aesculap"
+            descr="CLI-Tool und Rust Library zum Ver-/Entschlüsseln mittels AES."
+        >
             <p>
                 Die Dokumentation der Library-Crate kann
                 <a href="rustdoc/aesculap">hier</a> eingesehen werden.
             </p>
-        </div>
+        </project-block>
 
-        <div class="project">
-            <h1><a href="https://github.com/rabuu/jisl">JISL</a></h1>
-            <p class="project-description">
-                Ein Java Interpreter für die
-                <a href="https://docs.racket-lang.org/htdp-langs/intermediate-lam.html">ISL+</a>.
-            </p>
+        <project-block name="JISL"
+            descr="Ein Java Interpreter für die ISL+."
+        >
             <p>
-                ISL+ ist ein Lisp-ähnlicher Racket-Dialect für Bildungszwecke.
-                JISL ist ein Toy-Interpreter, um Java und Basics der Programmiersprachenentwicklung zu lernen.
+                JISL ist ein (nicht ganz vollständiger) Toy-Interpreter für die
+                <a href="https://docs.racket-lang.org/htdp-langs/intermediate-lam.html">ISL+</a>,
+                ein vereinfachter Racket-Dialekt für Bildungszwecke.
             </p>
-        </div>
+        </project-block>
 
-        <div class="project">
-            <h1><a href="https://github.com/rabuu/dotfiles">dotfiles</a></h1>
-            <p class="project-description">
-                Konfigurationsdateien für verschiedene Software, die ich nutze.
-            </p>
-        </div>
+        <project-block name="dotfiles"
+            descr="Konfigurationsdateien für verschiedene Software, die ich nutze."
+        ></project-block>
 
     </body>
 </html>

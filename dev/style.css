@@ -1,20 +1,39 @@
 .project {
-    padding: 0 1em;
+    padding: 0.3em 1em;
     margin: 1em;
     background-color: var(--bg-highlight);
     border: 1px solid var(--fg);
     border-radius: var(--border-radius);
 }
 
-.project h1 {
-    font-size: 130%;
+.project-headline {
+    display: flex;
+    align-items: center;
 }
 
-.project h1 a {
+.project-headline h2 {
+    margin: 0.2em;
+}
+
+.project-headline img {
+    padding-right: 0.4em;
+    height: 1.7em;
+}
+
+.project-headline h2 a {
     color: var(--fg);
-    text-decoration: none;
+    text-decoration: underline;
 }
 
-.project h1 a:hover {
-    text-decoration: underline;
+.project-headline h2 a:hover {
+    color: var(--accent-fg);
+}
+
+.project p {
+    margin: 0.3em;
+}
+
+.project-description {
+    font-style: italic;
+    padding-bottom: 0.6em;
 }
