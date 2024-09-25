@@ -12,9 +12,6 @@
 
         <link rel="stylesheet" href="/common.css" type="text/css" media="screen" />
         <script type="module" src="/common.js"></script>
-
-        <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-        <script type="text/javascript" src="main.js"></script>
     </head>
 
     <body>
@@ -26,13 +23,14 @@
             Hier ist eine Auswahl:
         </p>
 
-        <project-block name="website" descr="Meine persönliche Webseite.">
+        <content-block title="website" href="github" desc="Meine persönliche Webseite.">
             <p>Sie läuft hier auf <a href="/">rbuurman.de</a>.</p>
-        </project-block>
+        </content-block>
 
-        <project-block
-            name="raytrascii"
-            descr="Ein Ray Tracer, der als ASCII Zeichen rendert."
+        <content-block
+            title="raytrascii"
+            href="github"
+            desc="Ein Ray Tracer, der als ASCII Zeichen rendert."
         >
             <p>
                 Dieses Projekt basiert auf dem Buch
@@ -42,63 +40,70 @@
                 von <a href="https://github.com/petershirley">Peter Shirley</a>
                 und ist in Rust geschrieben.
             </p>
-        </project-block>
+        </content-block>
 
-        <project-block
-            name="JISL"
-            descr="Ein Java Interpreter für die ISL+."
+        <content-block
+            title="JISL"
+            href="github"
+            desc="Ein Java Interpreter für die ISL+."
         >
             <p>
                 JISL ist ein Toy-Interpreter für die
                 <a href="https://docs.racket-lang.org/htdp-langs/intermediate-lam.html">ISL+</a>,
                 ein vereinfachter Racket-Dialekt für Bildungszwecke.
             </p>
-        </project-block>
+        </content-block>
 
 
-        <project-block
-            name="photoshoot"
-            descr="Generiert ein GIF, in dem sich Geschosse zu einem Bild zusammensetzen."
-        ></project-block>
+        <content-block
+            title="photoshoot"
+            href="github"
+            desc="Generiert ein GIF, in dem sich Geschosse zu einem Bild zusammensetzen."
+        ></content-block>
 
-        <project-block
-            name="steganos"
-            descr="Tool um eine Textnachricht in einem Bild zu verstecken."
-        ></project-block>
+        <content-block
+            title="steganos"
+            href="github"
+            desc="Tool um eine Textnachricht in einem Bild zu verstecken."
+        ></content-block>
 
-        <project-block
-            name="huffman-viz"
-            descr="Eine Webapp, die den Huffman Algorithmus visualisiert."
+        <content-block
+            title="huffman-viz"
+            href="github"
+            desc="Eine Webapp, die den Huffman Algorithmus visualisiert."
         >
             <p>Die Webapp ist in Rust geschrieben und kompiliert zu WASM.</p>
             <p>Sie läuft <a href="huffman/">hier</a>.</p>
-        </project-block>
+        </content-block>
 
-        <project-block
-            name="aesculap"
-            descr="CLI-Tool und Rust Library zum Ver-/Entschlüsseln mittels AES."
+        <content-block
+            title="aesculap"
+            href="github"
+            desc="CLI-Tool und Rust Library zum Ver-/Entschlüsseln mittels AES."
         >
             <p>
                 Die Dokumentation der Library-Crate kann
                 <a href="rustdoc/aesculap">hier</a> eingesehen werden.
             </p>
-        </project-block>
+        </content-block>
 
-        <project-block
-            name="wordle-bot"
-            descr="Ein Bot, der das Spiel Wordle informationstheoretisch optimal spielt."
+        <content-block
+            title="wordle-bot"
+            href="github"
+            desc="Ein Bot, der das Spiel Wordle informationstheoretisch optimal spielt."
         >
             <p>
                 Das Projekt basiert auf
                 <a href="https://www.youtube.com/watch?v=v68zYyaEmEA">diesem</a>
                 Video von <a href="https://www.youtube.com/@3blue1brown">3Blue1Brown</a>.
             </p>
-        </project-block>
+        </content-block>
 
-        <project-block
-            name="dotfiles"
-            descr="Konfigurationsdateien für verschiedene Software, die ich nutze."
-        ></project-block>
+        <content-block
+            title="dotfiles"
+            href="github"
+            desc="Konfigurationsdateien für verschiedene Software, die ich nutze."
+        ></content-block>
 
     </body>
 </html>

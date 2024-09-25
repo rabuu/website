@@ -1,4 +1,4 @@
-.project {
+.content-block {
     padding: 0.3em 1em;
     margin: 1em;
     background-color: var(--bg-highlight);
@@ -6,34 +6,34 @@
     border-radius: var(--border-radius);
 }
 
-.project-headline {
+.content-block-headline {
     display: flex;
     align-items: center;
 }
 
-.project-headline h2 {
+.content-block-headline h2 {
     margin: 0.2em;
 }
 
-.project-headline img {
+.content-block-headline img {
     padding-right: 0.4em;
     height: 1.7em;
 }
 
-.project-headline h2 a {
+.content-block-headline h2 a {
     color: var(--fg);
     text-decoration: underline;
 }
 
-.project-headline h2 a:hover {
+.content-block-headline h2 a:hover {
     color: var(--accent-fg);
 }
 
-.project p {
+.content-block p {
     margin: 0.3em;
 }
 
-.project-description {
+.content-block-description {
     font-style: italic;
     padding-bottom: 0.6em;
 }

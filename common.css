@@ -1,4 +1,5 @@
 @import "./modules/navbar.css";
+@import "./modules/contentblock.css";
 
 :root {
     --bg: #ebebeb;
