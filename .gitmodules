@@ -1,0 +1,3 @@
+[submodule "krimskrams/bibliothek/texts"]
+	path = krimskrams/bibliothek/texts
+	url = https://github.com/rabuu/bibliothek
