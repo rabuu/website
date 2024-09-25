@@ -1,12 +1,15 @@
-var width_query = window.matchMedia("(max-width: 600px)");
+const nav_width_query = window.matchMedia("(max-width: 600px)");
 
-width_query.addEventListener("change", function() {
-    document.getElementById("nav-links").style.display = width_query.matches ? "none" : "block";
-})
+const nav_width_query_listener = () => {
+    document.getElementById("nav-links").style.display =
+        nav_width_query.matches ? "none" : "block";
+}
+
+nav_width_query.addEventListener("change", nav_width_query_listener);
 
 function nav_toggle_links() {
     var links = document.getElementById("nav-links");
-    if (width_query.matches) {
+    if (nav_width_query.matches) {
         if (links.style.display == "block") {
             links.style.display = "none";
         } else {
@@ -88,4 +91,4 @@ class NavBar extends HTMLElement {
     }
 }
 
-customElements.define("nav-bar", NavBar);
+export default NavBar;
