@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: var(--bg-step1);
+    z-index: 20;
 }
 
 #nav-head {
