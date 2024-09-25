@@ -1,0 +1,31 @@
+.long-toc {
+    -moz-column-count: 3;
+    -moz-column-gap: 2em;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 2em;
+    column-count: 3;
+    column-gap: 2em;
+}
+
+.long-toc li {
+    padding-left: 0.5em;
+    position: relative;
+}
+
+.long-toc li:before {
+    margin: 0 0 0 1em;
+    text-align: right;
+    width: 2em;
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+}
+
+.lower-greek {
+    list-style-type: lower-greek;
+}
+
+.upper-greek {
+    /* FIXME: upper-greek not working */
+    list-style-type: lower-greek;
+}
