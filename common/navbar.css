@@ -26,6 +26,10 @@
     width: 2.0em;
 }
 
+#nav-label {
+    font-size: 120%;
+}
+
 #nav-hamburger {
     display: none;
     width: 2em;

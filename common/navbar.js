@@ -16,10 +16,10 @@ function nav_toggle_links() {
 }
 
 const NAVBAR_LINKS = {
-    home: "/",
-    dev: "/dev/",
+    homepage: "/",
+    projekte: "/projekte/",
+    krimskrams: "/krimskrams/",
     cloud: "https://cloud.rbuurman.de",
-    misc: "/misc/",
 }
 
 class NavBar extends HTMLElement {
@@ -28,7 +28,7 @@ class NavBar extends HTMLElement {
     }
 
     connectedCallback() {
-        let wrapper = document.createElement("nav");
+        let wrapper = document.createElement("div");
         wrapper.id = "nav-bar";
 
         let head = document.createElement("div");
@@ -43,7 +43,7 @@ class NavBar extends HTMLElement {
 
         homelink.append(logo);
 
-        let label = document.createElement("p");
+        let label = document.createElement("h1");
         label.id = "nav-label";
         if (this.hasAttribute("label")) {
             label.textContent = this.getAttribute("label");
@@ -60,6 +60,7 @@ class NavBar extends HTMLElement {
 
         let links = document.createElement("ul");
         links.id = "nav-links";
+        links.role = "navigation";
 
         for (let [name, href] of Object.entries(NAVBAR_LINKS)) {
             let entry = document.createElement("li");

@@ -10,5 +10,5 @@ fi
 
 echo "Deploy to $DEPLOY_USER@rbuurman.de\n"
 
-scp -r index.html style.css favicon.ico assets common dev misc \
+scp -r index.html style.css favicon.ico assets common projekte krimskrams \
     "$DEPLOY_USER@rbuurman.de:rbuurman.de/httpdocs"
