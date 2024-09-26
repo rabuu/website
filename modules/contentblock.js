@@ -29,7 +29,7 @@ class ContentBlock extends HTMLElement {
 
         let img = document.createElement("img");
         img.classList.add("content-block-link-img");
-        img.src = `/assets/${gh ? "github-mark.svg" : "link.png"}`;
+        img.src = `/assets/${gh ? "github-mark.svg" : "link.svg"}`;
 
         headline.append(img);
 
