@@ -13,11 +13,12 @@
     --border-radius: 5px;
 }
 
-html {
+body {
     margin: 0;
 
     background: var(--bg);
     color: var(--fg);
+    font-family: Garamond, Georgia, serif;
 }
 
 a {
