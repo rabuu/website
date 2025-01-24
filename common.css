@@ -18,7 +18,7 @@ html {
 
     background: var(--bg);
     color: var(--fg);
-    font-family: Garamond, Georgia, serif;
+    font-family: Helvetica sans-serif;
 }
 
 a {
