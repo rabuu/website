@@ -21,8 +21,8 @@ function nav_toggle_links() {
 const NAVBAR_LINKS = {
     homepage: "/",
     projekte: "/projekte/",
-    cloud: "https://cloud.rbuurman.de",
     krimskrams: "/krimskrams/",
+    cloud: "https://cloud.rbuurman.de",
 }
 
 class NavBar extends HTMLElement {
