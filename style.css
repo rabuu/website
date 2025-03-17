@@ -1,16 +1,28 @@
-#box {
-    margin: auto;
-    padding-top: 2em;
+#title-box {
+    margin: 2em 20%;
+    padding: 0.2em;
     text-align: center;
+    background: var(--bg-highlight);
+    border: 1px solid var(--fg);
+    border-radius: var(--border-radius);
 }
 
-#box h1 {
-    font-size: 110%;
+#title-box h1 {
+    font-size: 120%;
 }
 
-#box img {
-    display: block;
-    margin: auto;
-    width: 20em;
-    border: 3px solid var(--fg);
+.content {
+    margin: 1em;
+}
+
+.content h3, h4 {
+    margin-bottom: 0.4em;
+}
+
+.content p {
+    margin: 0.4em;
+}
+
+.content ul {
+    margin: 0.4em;
 }
