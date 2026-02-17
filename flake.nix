@@ -13,6 +13,7 @@
           name = "website";
 
           packages = with pkgs; [
+            just
           ];
         };
       }
