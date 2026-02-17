@@ -25,3 +25,8 @@ a {
     color: var(--accent-fg);
     text-decoration: underline;
 }
+
+ul {
+    padding-inline-start: 0;
+    list-style: "> " inside;
+}
