@@ -2,9 +2,14 @@
     list-style-type: lower-greek;
 }
 
+@counter-style upper-greek {
+  system: alphabetic;
+  symbols: Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω;
+  suffix: " ";
+}
+
 .upper-greek {
-    /* FIXME: upper-greek not working */
-    list-style-type: lower-greek;
+    list-style-type: upper-greek;
 }
 
 .long-toc {
