@@ -11,5 +11,5 @@ sshpass -p "$password" scp -r \
     common.js common.css \
     index.html style.css favicon.ico \
     assets modules \
-    projekte krimskrams \
+    dev stuff \
     "$user@rbuurman.de:rbuurman.de/httpdocs"

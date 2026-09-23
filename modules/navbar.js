@@ -19,10 +19,10 @@ function nav_toggle_links() {
 }
 
 const NAVBAR_LINKS = {
-    Homepage: "/",
-    Projekte: "/projekte/",
-    Krimskrams: "/krimskrams/",
-    Cloud: "https://cloud.rbuurman.de",
+    home: "/",
+    dev: "/dev/",
+    stuff: "/stuff/",
+    cloud: "https://cloud.rbuurman.de",
 }
 
 class NavBar extends HTMLElement {

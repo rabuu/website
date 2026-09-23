@@ -25,16 +25,18 @@ class ContentBlock extends HTMLElement {
       let header = document.createElement("h2");
       if (this.hasAttribute("href")) {
         const href = this.getAttribute("href");
-        const gh = href === "github";
+        const hrefIsGithub = href === "github";
+        const hrefStartsWithGithub = href.startsWith("https://github.com");
+        const githubImg = hrefIsGithub || hrefStartsWithGithub;
 
         let img = document.createElement("img");
         img.classList.add("content-block-link-img");
-        img.src = `/assets/${gh ? "github-mark.svg" : "link.svg"}`;
+        img.src = `/assets/${githubImg ? "github-mark.svg" : "link.svg"}`;
 
         headline.append(img);
 
         let link = document.createElement("a");
-        link.href = gh ? `https://github.com/${GHUSER}/${title}` : href;
+        link.href = hrefIsGithub ? `https://github.com/${GHUSER}/${title}` : href;
         link.textContent = title;
         header.append(link);
       } else {

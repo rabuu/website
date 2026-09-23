@@ -15,18 +15,22 @@
 
 html {
     margin: 0;
-
     background: var(--bg);
     color: var(--fg);
-    font-family: Helvetica sans-serif;
+    font-family: ui-monospace, "Liberation Mono", monospace;
 }
 
 a {
     color: var(--accent-fg);
+    text-decoration: none;
+}
+
+a:hover {
     text-decoration: underline;
 }
 
 ul {
     padding-inline-start: 0;
     list-style: "> " inside;
+    line-height: 1.5;
 }
